@@ -1,0 +1,10 @@
+CREATE TABLE em310_soterrados (
+    distance NUMERIC,
+    level NUMERIC,
+    battery NUMERIC,
+    position INTEGER,
+    status INTEGER,
+    rssi INTEGER,
+    snr NUMERIC,
+    altitude DOUBLE PRECISION
+) INHERITS (public."Sensors");
