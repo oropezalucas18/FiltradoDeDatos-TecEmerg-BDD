@@ -1,0 +1,6 @@
+CREATE TABLE public.ws302_sonido (
+  laeq numeric,
+  lai numeric,
+  laimax numeric,
+  battery numeric
+)INHERITS (public."Sensors");

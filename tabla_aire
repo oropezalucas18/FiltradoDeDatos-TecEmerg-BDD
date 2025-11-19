@@ -1,0 +1,7 @@
+CREATE TABLE public.em500_aire (
+  co2 numeric,
+  temperature numeric,
+  humidity numeric,
+  pressure numeric,
+  battery numeric
+) INHERITS (public."Sensors");
