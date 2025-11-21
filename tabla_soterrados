@@ -1,10 +1,9 @@
-CREATE TABLE em310_soterrados (
-    distance NUMERIC,
-    level NUMERIC,
-    battery NUMERIC,
-    position INTEGER,
-    status INTEGER,
-    rssi INTEGER,
-    snr NUMERIC,
-    altitude DOUBLE PRECISION
-) INHERITS (public."Sensors");
+create table public.water_data (
+  id bigserial not null,
+  sensor_base_id bigint null,
+  distance double precision null,
+  position text null,
+  water_status text null,
+  constraint water_data_pkey primary key (id),
+  constraint water_data_sensor_base_id_fkey foreign KEY (sensor_base_id) references sensor_base_data (id) on delete CASCADE
+) TABLESPACE pg_default;
