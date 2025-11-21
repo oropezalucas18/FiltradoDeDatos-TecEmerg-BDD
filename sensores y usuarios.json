@@ -1,0 +1,73 @@
+{
+  "sensores": {
+    "CO2": {
+      "meta": {
+        "campos": [
+          "co2",
+          "temperatura",
+          "humedad",
+          "bateria",
+          "rssi",
+          "snr",
+          "ubicacion"
+        ],
+        "descripcion": "Sensor de concentración de dióxido de carbono (EM500-CO2-915M)",
+        "tipo": "CO2",
+        "unidad": "ppm"
+      }
+    },
+    "Sonido": {
+      "meta": {
+        "campos": [
+          "nivel_sonido",
+          "max_sonido",
+          "min_sonido",
+          "temperatura",
+          "bateria",
+          "rssi",
+          "snr",
+          "ubicacion"
+        ],
+        "descripcion": "Sensor de nivel de sonido ambiental (WS302-915M)",
+        "tipo": "Sonido",
+        "unidad": "dB"
+      }
+    },
+    "Soterrado": {
+      "meta": {
+        "campos": [
+          "nivel_agua",
+          "distancia",
+          "temperatura",
+          "bateria",
+          "rssi",
+          "snr",
+          "ubicacion"
+        ],
+        "descripcion": "Sensor de nivel de agua o profundidad (EM310-UDL-915M)",
+        "tipo": "Soterrado",
+        "unidad": "m"
+      }
+    }
+  },
+  "users": {
+    "001": {
+      "created_at": "2024-11-01T12:00:00Z",
+      "mail": "admin@gamc.bo",
+      "name": "Jorge Dilan",
+      "password": "hashed_password_admin",
+      "role": "Administrador",
+      "status": "active",
+      "surname": "Aguilar"
+    },
+    "002": {
+      "created_at": "2024-11-02T09:30:00Z",
+      "mail": "tecnico1@gamc.bo",
+      "name": "Isaac",
+      "password": "hashed_password_tecnico",
+      "role": "Técnico",
+      "status": "active",
+      "surname": "Triveño"
+    }
+  }
+}
