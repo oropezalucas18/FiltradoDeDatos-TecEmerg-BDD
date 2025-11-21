@@ -1,6 +1,10 @@
-CREATE TABLE public.ws302_sonido (
-  laeq numeric,
-  lai numeric,
-  laimax numeric,
-  battery numeric
-)INHERITS (public."Sensors");
+create table public.sound_data (
+  id bigserial not null,
+  sensor_base_id bigint null,
+  laeq double precision null,
+  lai double precision null,
+  laimax double precision null,
+  sound_status text null,
+  constraint sound_data_pkey primary key (id),
+  constraint sound_data_sensor_base_id_fkey foreign KEY (sensor_base_id) references sensor_base_data (id) on delete CASCADE
+) TABLESPACE pg_default;
