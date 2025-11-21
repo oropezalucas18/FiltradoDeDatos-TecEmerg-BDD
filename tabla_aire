@@ -1,7 +1,14 @@
-CREATE TABLE public.em500_aire (
-  co2 numeric,
-  temperature numeric,
-  humidity numeric,
-  pressure numeric,
-  battery numeric
-) INHERITS (public."Sensors");
+create table public.air_quality_data (
+  id bigserial not null,
+  sensor_base_id bigint null,
+  co2 double precision null,
+  temperature double precision null,
+  humidity double precision null,
+  pressure double precision null,
+  co2_status text null,
+  temperature_status text null,
+  humidity_status text null,
+  pressure_status text null,
+  constraint air_quality_data_pkey primary key (id),
+  constraint air_quality_data_sensor_base_id_fkey foreign KEY (sensor_base_id) references sensor_base_data (id) on delete CASCADE
+) TABLESPACE pg_default;
